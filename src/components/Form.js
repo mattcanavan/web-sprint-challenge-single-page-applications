@@ -156,7 +156,7 @@ export default function Form(props) {
                 <br />
 
                 {/* ////////// BUTTON ////////// */}
-                <button disabled={disabled}>Submit Order</button>
+                <button className='submitOrder' disabled={disabled}>Submit Order</button>
                 <div className='errors'>
                     <div>{errors.pizzaSize}</div>
                     <div>{errors.sauce}</div>

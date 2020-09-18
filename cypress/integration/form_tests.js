@@ -5,7 +5,12 @@ describe('Pizza app', () => {
         cy.visit('http://localhost:3000/pizza')
     })
 
-    it('can type in the inputs', () => {
+    
+    it('can select pizza size', () => {
+        cy.get('[name=pizzaSize]').select('Small')
+        cy.get('[name=sauce]').first().check()
+        cy.get('[type="checkbox"]').check()
+        
         cy.get('input[name=specialInstructions]')
             .should('have.value', '')
             .type('Please drop it on the floor.')
@@ -15,5 +20,8 @@ describe('Pizza app', () => {
             .should("have.value", "")
             .type("Andre 3000")
             .should('have.value', 'Andre 3000')
+
+        cy.get('.submitOrder').click()
     })
+ 
 })
