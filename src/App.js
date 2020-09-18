@@ -4,7 +4,7 @@ import axios from 'axios'
 import Form from './components/Form'
 import schema from './validation/formSchema'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
-import styles from './App.css'
+import './App.css'
 
 
 const initalPizzaValues = {

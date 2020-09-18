@@ -17,5 +17,7 @@ export default yup.object().shape({
     
     fname: yup.string()
         .min(2, "Full name must be 2 characters or longer.")
-        .required('Full name is required.')
+        .required('Full name is required.'),
+
+    specialInstructions: yup.string()
 })
